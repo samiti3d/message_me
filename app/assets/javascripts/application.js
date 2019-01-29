@@ -18,22 +18,5 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function(){
-    $('.ui.dropdown')
-        .dropdown({
-            values: [
-            {
-                name: 'Log out',
-                value: 'male'
-            },
-            {
-                name     : 'Log in',
-                value    : 'female',
-                selected : true
-            },
-            {
-                name:   'Sign up',
-            }
-            ]
-        })
-        ;
+    $('.ui.dropdown').dropdown();
 })

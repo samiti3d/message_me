@@ -1,1 +1,46 @@
-<p>Home Page</p>
+<h2 class="ui center aligned icon header">
+  <i class="circular users icon orange"></i>
+  ห้องพูดคุยสาธารณะ: ของชาวจังหวัดระยอง
+</h2>
+
+<div class="ui two column grid">
+    <div class="twelve wide column">
+        <div class="ui card fluid raised chatbox">
+            <div class="content">
+                <div class="ui large feed">
+                    <%= render @messages%>
+                </div>
+            </div>
+            <div class="extra content">
+                <form class="ui reply form">
+                    <div class="field" data-children-count="1">
+                        <div class="ui fluid icon input">
+                        <input type="text" placeholder="ใส่ข้อความ...">
+                        <i class="bordered inverted orange edit icon"></i> 
+                        </div>
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+
+    <div class="four wide column">
+        <div class="ui fluid raised card chatbox">
+            <div class="content">
+                <div class="ui inverted vertical menu">
+                    <a class="active item">
+                        Home
+                    </a>
+                    <a class="item">
+                        Messages
+                    </a>
+                    <a class="item">
+                        Friends
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
