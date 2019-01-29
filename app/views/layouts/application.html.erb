@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>MessageMe</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +10,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <%= render 'layouts/navigation' %>
+
   <body>
-    <%= yield %>
+    <div class="ui container">
+      <%= yield %>
+    </div>
   </body>
 </html>
+
+
