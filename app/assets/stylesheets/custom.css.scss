@@ -1,8 +1,15 @@
 @import "semantic-ui";
+
 .chatbox{ 
     height: 450px; 
-    overflow: hidden;
+    // overflow: scroll;
+}
+
+#messages{
+    overflow: auto;
+    height: 15em;
 }
 .margin-top{
     margin-top: 4%;
 }
+
