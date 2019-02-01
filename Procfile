@@ -1,1 +1,1 @@
-web: puma -C config/puma.rb & sidekiq & wait -n
+web: bundle exec rails server -p $PORT
