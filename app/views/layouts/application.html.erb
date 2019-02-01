@@ -12,13 +12,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <%= render 'layouts/navigation' %>
-
   <body>
-    <div class="ui container margin-top">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
-    </div>
+    <%= render 'layouts/navigation' %>
+      <div class="ui container margin-top">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
 

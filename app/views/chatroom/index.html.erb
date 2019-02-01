@@ -1,6 +1,6 @@
 <h2 class="ui center aligned icon header">
   <i class="circular users icon orange"></i>
-  ห้องพูดคุยสาธารณะ: ของชาวจังหวัดระยอง
+  ห้องแชทชาวระยอง
 </h2>
 
 <div class="ui two column grid">
@@ -12,6 +12,8 @@
                 </div>
             </div>
             <div class="extra content">
+
+            <% if logged_in? %>
                 <%= form_for(@message, html: {class: "ui reply form"}, role: "form", url: message_path, remote: true) do |f| %>
                     <div class="field" data-children-count="1">
                         <div class="ui fluid icon input">
@@ -19,7 +21,15 @@
                             <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe  %>
                         </div>
                     </div>
-                <% end %>        
+                <% end %>   
+            <% else %>
+                <%= link_to '<div class="ui animated fade button fluid" tabindex="0">
+                <div class="visible content">กรุณาลงชื่อเข้าใช้</div><div class="hidden content">เข้าใช้งานระบบ หรือ สมัครบัญชีใหม่</div>'.html_safe, login_path %>
+                
+                    
+                    
+                </div>
+            <% end %>     
             </div>
         </div>
     </div>

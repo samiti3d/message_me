@@ -1,25 +1,25 @@
   <div class="ui large menu">
     <div class="ui container">
-      <a class="active item">
-        Chatroom
-      </a>
       <a class="item">
-        Messages
+        Rayong.app
+      </a>
+      <a class="active item">
+        หน้าแรก
       </a>
       <div class="right menu">
         <div class="ui dropdown item">
-          Account <i class="dropdown icon"></i>
+          บัญชี <i class="dropdown icon"></i>
           <div class="menu">
             <% if logged_in? %>
-              <%= link_to "Log out", logout_path, method: :delete, class: "item" %>
+              <%= link_to "ออกจากระบบ", logout_path, method: :delete, class: "item" %>
             <% else %>
-              <%= link_to "Log in", login_path, class: "item" %>
+              <%= link_to "เข้าสู่ระบบ", login_path, class: "item" %>
             <% end %>
           </div>
         </div>
         <div class="item">
             <% if !logged_in? %>
-              <%= link_to "Sign up", login_path, class: "item"%>
+              <%= link_to "ลงชื่อเข้าใช้", login_path, class: "item"%>
             <% end %>
         </div>
       </div>
